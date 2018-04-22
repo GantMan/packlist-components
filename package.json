@@ -1,0 +1,15 @@
+{
+  "name": "packlist-components",
+  "version": "1.0.1",
+  "description": "Simple React Native Components for Packlist React Museum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "native"
+  ],
+  "author": "Gant Laborde",
+  "license": "MIT"
+}
