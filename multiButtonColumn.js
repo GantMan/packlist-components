@@ -1,5 +1,5 @@
 import React from 'react'
-import { TouchableWithoutFeedback, Text, View, StyleSheet } from 'react-native'
+import { TouchableWithoutFeedback, Text, View, StyleSheet, LayoutAnimation } from 'react-native'
 
 const defaultOptions = [
   'Sunday',
@@ -112,6 +112,7 @@ export default class MultiButtonColumn extends React.Component {
   value = () => this.state.items
 
   renderOptions = () => {
+    LayoutAnimation.spring()
     return this.state.options.map((option, index) => {
       return this.renderOption(option, false, index, this.state.options.length)
     })

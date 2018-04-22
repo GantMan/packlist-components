@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  LayoutAnimation
 } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -24,6 +25,7 @@ export default class SimpleList extends Component {
   }
 
   listItems = () => {
+    LayoutAnimation.spring()
     return this.state.allItems.map(item =>
       <View style={styles.itemContainer} key={item}>
         <Text style={styles.itemText}>{item}</Text>
@@ -38,7 +40,7 @@ export default class SimpleList extends Component {
     }
   }
 
-  render() {
+  render () {
     return (
         <View>
           { this.listItems() }
