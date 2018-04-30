@@ -1,13 +1,18 @@
-import AddPackingItem from './addPackingItem'
-import AddItem from './addPackingItemWeb'
-import MultiButtonColumn from './multiButtonColumn'
-import SimpleList from './simpleList'
-import ListItems from './simpleListWeb'
+import AddPackingItem from './addPackingItemWeb'
+import SimpleList from './simpleListWeb'
 
-export {
+// Switch out for reactNative?
+let RNItems = {}
+if (!navigator.platform) {
+  RNItems = {
+    AddPackingItem: require('./addPackingItem'),
+    SimpleList: require('./simpleListWeb'),
+    MultiButtonColumn: require('./multiButtonColumn')
+  }
+}
+
+export default {
   AddPackingItem,
-  AddItem,
-  MultiButtonColumn,
   SimpleList,
-  ListItems
+  ...RNItems
 }
